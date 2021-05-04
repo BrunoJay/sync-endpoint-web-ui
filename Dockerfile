@@ -22,4 +22,4 @@ COPY --from=compiler /sync-endpoint-web-ui.jar /sync-endpoint-web-ui.jar
 
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /sync-endpoint-web-ui.jar" ]
 
-EXPOSE 8080
+EXPOSE 8186

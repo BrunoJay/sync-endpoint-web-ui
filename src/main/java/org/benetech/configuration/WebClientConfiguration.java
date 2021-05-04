@@ -17,18 +17,18 @@ public class WebClientConfiguration {
 
   private static Log logger = LogFactory.getLog(WebClientConfiguration.class);
 
-  @Value("${odk.url:http://localhost:8080}")
+  @Value("${odk.url:http://localhost:8186}")
   String odkUrl;
-  
+
   @Value("${odk.realm:opendatakit.org ODK 2.0 Server}")
   String odkRealm;
-  
+
   @Value("${odk.app.id:'default'}")
   String odkAppId;
-  
+
   @Value("${odk.client.version:2}")
   String odkClientVersion;
-  
+
   @Bean(name = "webServicesProperties")
   public Properties webServicesProperties() {
     Properties properties = new Properties();
@@ -44,7 +44,7 @@ public class WebClientConfiguration {
 
     return properties;
   }
-  
-  
-  
+
+
+
 }
